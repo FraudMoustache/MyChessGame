@@ -13,8 +13,6 @@ def toString(board):
       board[i][j]=""
   return (board)
   
-  board = toString(board)
-  
 def displayBoard(board):
   k=1
   l=1
@@ -68,7 +66,3 @@ def createBoard(board):
 
   for i in range(8):
     board[6][i] = 'W_P'
-
-createBoard(board)
-
-displayBoard(board)
