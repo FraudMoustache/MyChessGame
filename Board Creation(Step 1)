@@ -1,0 +1,74 @@
+board = [[0, 0, 0, 0, 0, 0, 0, 0],
+         [0, 0, 0, 0, 0, 0, 0, 0],
+         [0, 0, 0, 0, 0, 0, 0, 0],
+         [0, 0, 0, 0, 0, 0, 0, 0],
+         [0, 0, 0, 0, 0, 0, 0, 0],
+         [0, 0, 0, 0, 0, 0, 0, 0],
+         [0, 0, 0, 0, 0, 0, 0, 0],
+         [0, 0, 0, 0, 0, 0, 0, 0]]
+
+def toString(board):
+  for i in range(8):  #rows
+    for j in range(8):  #columns
+      board[i][j]=""
+  return (board)
+  
+  board = toString(board)
+  
+ def displayBoard(board):
+  k=1
+  l=1
+  for i in range(9):  #rows
+
+    for j in range(9):  #columns
+
+      if(j==0 and i<8):
+        print("|", str(k), "|", end='')
+        k=k+1
+
+      if(i==8):
+        if(j==0):
+          print("|   |", end='')
+        #if(j==1):
+         # print("| ", str(l), " |", end='')
+          #l=l+1
+        else:
+          print(str(l), "  |", end='')
+          l=l+1
+
+      if(j>0 and i!=8):
+        if(board[i][j-1]==""):
+          print(board[i][j-1], "   |", end='')
+        else:
+          print(board[i][j-1], "|", end='')
+    print()
+ 
+  
+    def createBoard(board):
+  board[0][0] = 'B_R'
+  board[0][1] = 'B_H'
+  board[0][2] = 'B_B'
+  board[0][3] = 'B_K'
+  board[0][4] = 'B_Q'
+  board[0][5] = 'B_B'
+  board[0][6] = 'B_H'
+  board[0][7] = 'B_R'
+
+  for i in range(8):
+    board[1][i] = 'B_P'
+
+  board[7][0] = 'W_R'
+  board[7][1] = 'W_H'
+  board[7][2] = 'W_B'
+  board[7][3] = 'W_K'
+  board[7][4] = 'W_Q'
+  board[7][5] = 'W_B'
+  board[7][6] = 'W_H'
+  board[7][7] = 'W_R'
+
+  for i in range(8):
+    board[6][i] = 'W_P'
+
+createBoard(board)
+
+displayBoard(board)
