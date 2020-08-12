@@ -68,7 +68,6 @@ def createBoard(board):
 def invertBoard(board):
 
   copy_board = board
-  displayBoard(copy_board)
   inverted_board = board
   #SUM OF ROW = 7
   #SUM OF COLLUMN = 7
