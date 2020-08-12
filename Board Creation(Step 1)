@@ -15,7 +15,7 @@ def toString(board):
   
   board = toString(board)
   
- def displayBoard(board):
+def displayBoard(board):
   k=1
   l=1
   for i in range(9):  #rows
@@ -44,7 +44,7 @@ def toString(board):
     print()
  
   
-    def createBoard(board):
+def createBoard(board):
   board[0][0] = 'B_R'
   board[0][1] = 'B_H'
   board[0][2] = 'B_B'
