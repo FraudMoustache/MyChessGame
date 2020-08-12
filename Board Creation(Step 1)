@@ -64,3 +64,24 @@ def createBoard(board):
 
   for i in range(8):
     board[6][i] = 'W_P'
+
+def invertBoard(board):
+
+  copy_board = board
+  displayBoard(copy_board)
+  inverted_board = board
+  #SUM OF ROW = 7
+  #SUM OF COLLUMN = 7
+
+  for i in range(8):  #rows
+
+    for j in range(8):  #columns
+      
+      if(i<4):
+        temp = inverted_board[i][j]
+        inverted_board[i][j] = board[7-i][7-j]
+        board[7-i][7-j] = temp
+      if(i>=4):
+        break;
+
+  return (inverted_board)
