@@ -27,9 +27,7 @@ def displayBoard(board):
       if(i==8):
         if(j==0):
           print("|   |", end='')
-        #if(j==1):
-         # print("| ", str(l), " |", end='')
-          #l=l+1
+
         else:
           print(str(l), "  |", end='')
           l=l+1
